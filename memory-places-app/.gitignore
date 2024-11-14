@@ -1,0 +1,68 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Dependency directories
+node_modules/
+.pnp/
+.pnp.js
+
+# Environment variables
+.env
+.env.*.local
+
+# Build directories
+dist/
+build/
+out/
+
+# Cache directories
+.cache/
+.next/
+.nyc_output/
+coverage/
+.vscode/
+.idea/
+
+# Editor and OS-specific files
+.DS_Store
+Thumbs.db
+*.swp
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+*.bak
+
+# Temporary files
+*.tmp
+*.temp
+
+# Jest cache and coverage files
+jest/
+coverage/
+
+# React Native
+.expo/
+.expo-shared/
+
+# Parcel cache
+.cache/
+
+# Storybook files
+storybook-static/
+
+# Webpack specific files
+webpack-assets.json
+.tern-port
+
+# TypeScript cache
+*.tsbuildinfo
+
+.vscode/
