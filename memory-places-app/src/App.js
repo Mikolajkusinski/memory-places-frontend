@@ -1,15 +1,15 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import MainPage from './Presentation/Pages/MainPage';
+import React from "react";
+import { Routes, Route } from "react-router-dom";
+import MainPage from "./Presentation/Pages/MainPage/MainPage";
+import AddPlacePage from "./Presentation/Pages/AddPlacePage/AddPlacePage";
 
 const App = () => {
-    return (
-        <Router>
-            <Routes>
-                <Route path="/" element={<MainPage />} />
-            </Routes>
-        </Router>
-    );
+  return (
+    <Routes>
+      <Route path="/" element={<MainPage />} />
+      <Route path="/add" element={<AddPlacePage />} />
+    </Routes>
+  );
 };
 
 export default App;
