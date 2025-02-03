@@ -1,0 +1,72 @@
+.maplibregl-popup-content {
+  background-color: transparent;
+  color: brown;
+  padding: 0;
+  width: 300px;
+  height: 200px;
+}
+.maplibregl-popup-tip {
+  border-top-color: rgba(0, 0, 0, 0.7) !important;
+}
+.popup {
+  width: 300px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.popup-background {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.popup-overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 50%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-content-text {
+  height: 100%;
+  width: 250px;
+}
+
+.popup-content {
+  display: flex;
+  height: 100px;
+  width: 300px;
+  justify-content: center;
+  color: white;
+}
+
+.popup-title {
+  margin: 0;
+  width: 250px;
+  padding-top: 5px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.popup-description {
+  margin: 0;
+  padding: 5px 0;
+  font-size: 12px;
+}
+
+.popup-goto-button {
+  background-color: transparent;
+  border: none;
+  color: white;
+}
