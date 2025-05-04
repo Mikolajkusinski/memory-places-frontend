@@ -1,12 +1,20 @@
 import React from "react";
-import { Form, FormControl } from "react-bootstrap";
-
+import { GeocodingControl } from "@maptiler/geocoding-control/react";
 import styles from "./TopBar.module.scss";
 import Hamburger from "hamburger-react";
+import * as maptilersdk from "@maptiler/sdk";
 
-const TopBar = ({ isOpen, toggleMenu }) => (
+//TODO fix layout on smaller window
+const TopBar = ({ isOpen, toggleMenu, mapController }) => (
   <div className={styles.topBar}>
-    <div className={styles.searchContainer}></div>
+    <div className={styles.searchContainer}>
+      {mapController && (
+        <GeocodingControl
+          apiKey={maptilersdk.config.apiKey}
+          mapController={mapController}
+        />
+      )}
+    </div>
 
     <div className={styles.logoContainer}>
       <h1 className={styles.logo}>LOGO</h1>

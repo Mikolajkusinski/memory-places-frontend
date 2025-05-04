@@ -5,14 +5,12 @@ import styles from "./Map.module.scss";
 import { MAPS_API_KEY } from "../../../config";
 import { createRoot } from "react-dom/client";
 import MarkerPopup from "./MarkerPopup";
-import { GeocodingControl } from "@maptiler/geocoding-control/react";
 import { createMapLibreGlMapController } from "@maptiler/geocoding-control/maplibregl-controller";
 import "@maptiler/geocoding-control/style.css";
 
-const MapComponent = () => {
+const MapComponent = ({ mapController, setMapController }) => {
   const mapContainer = useRef(null);
   const map = useRef(null);
-  const [mapController, setMapController] = useState();
   const center = { lng: 19.70638, lat: 52.54682 };
   const zoom = 6;
   maptilersdk.config.apiKey = MAPS_API_KEY;
@@ -57,14 +55,6 @@ const MapComponent = () => {
 
   return (
     <div className={styles.mapWrap}>
-      <div className={styles.geocoding}>
-        {mapController && (
-          <GeocodingControl
-            apiKey={maptilersdk.config.apiKey}
-            mapController={mapController}
-          />
-        )}
-      </div>
       <div ref={mapContainer} className={styles.map} />
     </div>
   );

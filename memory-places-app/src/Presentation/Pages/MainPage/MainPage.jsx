@@ -7,6 +7,7 @@ import MainFooter from "../../Components/MainFooter/MainFooter";
 
 const MainPage = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [mapController, setMapController] = useState();
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
@@ -17,9 +18,16 @@ const MainPage = () => {
       <SideMenu isOpen={menuOpen} />
 
       <div className={`${styles.content} ${menuOpen ? styles.open : ""}`}>
-        <TopBar isOpen={menuOpen} toggleMenu={toggleMenu} />
+        <TopBar
+          isOpen={menuOpen}
+          toggleMenu={toggleMenu}
+          mapController={mapController}
+        />
 
-        <MapComponent />
+        <MapComponent
+          mapController={mapController}
+          setMapController={setMapController}
+        />
         <MainFooter />
       </div>
     </div>
